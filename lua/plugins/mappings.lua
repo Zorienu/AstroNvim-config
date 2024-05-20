@@ -29,6 +29,10 @@ return {
           H = { "^", desc = "Start of line" },
           L = { "$", desc = "End of line" },
           Y = { "y$", desc = "Copy to end of line"},
+          ["#"] = { "#zzzv" },
+          ["*"] = { "*zzzv" },
+          n = { "nzzzv" },
+          N = { "Nzzzv" }
         },
         t = {
           -- setting a mapping to false will disable it
