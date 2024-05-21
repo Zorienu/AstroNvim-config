@@ -13,7 +13,7 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
   {
-    "jay-babu/mason-null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     opts = {
       handlers = {
         -- for prettier

@@ -58,3 +58,6 @@ if (self.PID) then
   os.execute('kill' .. self.PID)
 end
 ```
+
+#### Formatter
+- run `NullLsInstall` and install the required source (e.g prettier for typescript and javascript files)
