@@ -9,6 +9,7 @@ return {
           -- second key is the lefthand side of the map
           -- mappings seen under group name "Buffer"
           ["<Leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+          ["<Leader>bx"] = { "<cmd>%!xxd<cr><cr>", desc = "Hex parse" },
           ["<Leader>bD"] = {
             function()
               require("astroui.status").heirline.buffer_picker(function(bufnr)
