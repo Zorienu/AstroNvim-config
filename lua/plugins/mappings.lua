@@ -33,7 +33,8 @@ return {
           ["#"] = { "#zzzv" },
           ["*"] = { "*zzzv" },
           n = { "nzzzv" },
-          N = { "Nzzzv" }
+          N = { "Nzzzv" },
+          ["<leader>df"] = { function() require("dap").focus_frame() end, desc = "Focus Frame" }
         },
         t = {
           -- setting a mapping to false will disable it
