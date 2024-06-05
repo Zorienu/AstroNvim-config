@@ -119,6 +119,8 @@ return {
       })
     end
   },
+  { "rebelot/kanagawa.nvim" },
+  { "Mofiqul/vscode.nvim" },
   {
     "xiyaowong/transparent.nvim",
     name = 'transparent',
