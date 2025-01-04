@@ -27,7 +27,7 @@ return {
             function() require('hop').hint_char2() end
           },
           U = { "u", desc = "Undo changes" },
-          H = { "^", desc = "Start of line" },
+          H = { "0^", desc = "Start of line" },
           L = { "$", desc = "End of line" },
           Y = { "y$", desc = "Copy to end of line"},
           ["#"] = { "#zzzv" },
