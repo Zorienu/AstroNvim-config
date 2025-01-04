@@ -197,4 +197,10 @@ return {
       )
     end,
   },
+
+  {
+    "github/copilot.vim",
+    event = "InsertEnter",
+    autostart = true
+  }
 }
