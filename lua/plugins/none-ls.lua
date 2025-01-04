@@ -42,7 +42,7 @@ return {
         end,
       },
       -- NOTE: install the desired version of prettier using :MasonInstall prettier@X.X.X
-      ensure_installed = { "prettier@2.8.1" },
+      ensure_installed = { "prettier@3.3.3" },
       --debug = true
     },
 }
