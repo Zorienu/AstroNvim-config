@@ -2,8 +2,10 @@
 
 ---@type LazySpec
 return {
+  -- The commit that is working for me is 37671797d6e5f9bd0ee3ab965ab2e6de251e1930
   "nvimtools/none-ls.nvim",
     opts = {
+      commit = false,
       handlers = {
         -- for prettier
         prettier = function()
