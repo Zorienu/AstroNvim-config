@@ -181,4 +181,6 @@ for _, language in ipairs({ "typescript", "javascript" }) do
   }
 end
 
+require('dap.ext.vscode').load_launchjs('./launch.json', { ['pwa-node'] = {'javascript', 'typescript'} })
+
 return {}
