@@ -16,44 +16,44 @@ local dap = require("dap")
 
 for _, language in ipairs({ "typescript", "javascript" }) do
   dap.configurations[language] = {
-    {
-      name = "Run Current Test File (API)",
-      type = "pwa-node",
-      request = "launch",
-      console = "integratedTerminal",
-      -- trace = true, -- include debugger info
-      runtimeExecutable = "/home/jasyd/.nvm/versions/node/v20.13.1/bin/yarn",
-      runtimeArgs = function()
-        return {
-        "workspace",
-        "@canals/api",
-        "run",
-        "pnpify",
-        "mocha",
-        vim.fn.expand('%:p'),
-        "--import=tsx",
-        "--timeout",
-        "200000",
-        "--require",
-        "src/tests/global_setup.ts",
-        "--file",
-        "src/tests/per_run_setup.ts"
-        }
-      end,
-      env = {
-          TZ = "UTC",
-          CANALS_IS_TESTING = "1",
-          CANALS_ENV = "test"
-      },
-      sourceMaps = true,
-      smartStep = true,
-      skipFiles = { "<node_internals>/**" },
-      rootPath = "${workspaceFolder}",
-      cwd = "${workspaceFolder}",
-      internalConsoleOptions = "neverOpen",
-      -- envFile = "apps/legacy/.env",
-      killBehavior = "forceful"
-    },
+    -- {
+    --   name = "Run Current Test File (API)",
+    --   type = "pwa-node",
+    --   request = "launch",
+    --   console = "integratedTerminal",
+    --   -- trace = true, -- include debugger info
+    --   runtimeExecutable = "/home/jasyd/.nvm/versions/node/v20.13.1/bin/yarn",
+    --   runtimeArgs = function()
+    --     return {
+    --     "workspace",
+    --     "@canals/api",
+    --     "run",
+    --     "pnpify",
+    --     "mocha",
+    --     vim.fn.expand('%:p'),
+    --     "--import=tsx",
+    --     "--timeout",
+    --     "200000",
+    --     "--require",
+    --     "src/tests/global_setup.ts",
+    --     "--file",
+    --     "src/tests/per_run_setup.ts"
+    --     }
+    --   end,
+    --   env = {
+    --       TZ = "UTC",
+    --       CANALS_IS_TESTING = "1",
+    --       CANALS_ENV = "test"
+    --   },
+    --   sourceMaps = true,
+    --   smartStep = true,
+    --   skipFiles = { "<node_internals>/**" },
+    --   rootPath = "${workspaceFolder}",
+    --   cwd = "${workspaceFolder}",
+    --   internalConsoleOptions = "neverOpen",
+    --   -- envFile = "apps/legacy/.env",
+    --   killBehavior = "forceful"
+    -- },
     {
       type = "pwa-node",
       request = "launch",
