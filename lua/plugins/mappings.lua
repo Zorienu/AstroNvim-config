@@ -1,3 +1,8 @@
+local runDAP = function()
+  require("dap").continue()
+  require('dap.ext.vscode').load_launchjs('./launch.json', { ['pwa-node'] = {'javascript', 'typescript'} })
+end
+
 return {
   {
     "AstroNvim/astrocore",
@@ -34,7 +39,9 @@ return {
           ["*"] = { "*zzzv" },
           n = { "nzzzv" },
           N = { "Nzzzv" },
-          ["<leader>df"] = { function() require("dap").focus_frame() end, desc = "Focus Frame" }
+          ["<leader>df"] = { function() require("dap").focus_frame() end, desc = "Focus Frame" },
+          ["<F5>"] = { runDAP, desc = "Debugger: Start" },
+          ["<Leader>dc"] = { runDAP, desc = "Start/Continue (F5)" },
         },
         t = {
           -- setting a mapping to false will disable it
