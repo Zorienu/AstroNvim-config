@@ -42,6 +42,9 @@ return {
           ["<leader>df"] = { function() require("dap").focus_frame() end, desc = "Focus Frame" },
           ["<F5>"] = { runDAP, desc = "Debugger: Start" },
           ["<Leader>dc"] = { runDAP, desc = "Start/Continue (F5)" },
+          -- `all`: `boolean`: flag indicating that all root sessions should be terminated instead of only the currently focused session. Defaults to false
+          ["<Leader>dQ"] = { function() require("dap").terminate({ all = true }) end, desc = "Terminate Session (S-F5)" },
+          ["F17"] = { function() require("dap").terminate({ all = true }) end, desc = "Terminate Session" } -- F17 is the key code for Shift+F5
         },
         t = {
           -- setting a mapping to false will disable it
